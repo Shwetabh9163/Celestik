@@ -37,7 +37,7 @@ export default function Footer() {
                         className="text-center"
                     >
                         <p
-                            className="font-logo uppercase text-gold text-xl mb-1"
+                            className="font-logo uppercase text-gold text-lg md:text-xl mb-1"
                             style={{ letterSpacing: "0.1em", textShadow: "0 0 4px rgba(230,211,163,0.15)" }}
                         >
                             Celestik

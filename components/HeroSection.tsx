@@ -50,6 +50,16 @@ function ZodiacBg() {
 
 export default function HeroSection() {
   const router = useRouter();
+  const [mandalaSize, setMandalaSize] = useState(200);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMandalaSize(window.innerWidth < 640 ? 140 : 200);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-28 pb-20">
@@ -62,7 +72,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="font-script text-3xl md:text-4xl text-gold mb-8"
+          className="font-script text-2xl md:text-3xl lg:text-4xl text-gold mb-6 md:mb-8 px-4"
           style={{ letterSpacing: "0.03em", textShadow: "0 0 8px rgba(230,211,163,0.15)" }}
         >
           Not magic. Just stardust and algorithms.
@@ -73,12 +83,12 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 0.5 }}
-          className="flex items-center justify-center gap-0 mb-8"
+          className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-0 mb-8"
         >
           <span
             className="font-logo uppercase text-gold leading-none"
             style={{
-              fontSize: "clamp(4rem, 14vw, 10rem)",
+              fontSize: "clamp(3.5rem, 12vw, 10rem)",
               letterSpacing: "0.08em",
               textShadow: "0 0 6px rgba(230,211,163,0.2)",
             }}
@@ -92,13 +102,13 @@ export default function HeroSection() {
             transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
             className="mx-2 md:mx-4 flex-shrink-0"
           >
-            <ZodiacMandala size={220} />
+            <ZodiacMandala size={mandalaSize} />
           </motion.div>
 
           <span
             className="font-logo uppercase text-gold leading-none"
             style={{
-              fontSize: "clamp(4rem, 14vw, 10rem)",
+              fontSize: "clamp(3.5rem, 12vw, 10rem)",
               letterSpacing: "0.08em",
               textShadow: "0 0 6px rgba(230,211,163,0.2)",
             }}

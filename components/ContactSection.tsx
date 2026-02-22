@@ -26,7 +26,7 @@ export default function ContactSection() {
                     className="text-center mb-4"
                 >
                     <h2
-                        className="font-heading uppercase text-gold text-2xl md:text-4xl mb-2"
+                        className="font-heading uppercase text-gold text-2xl md:text-3xl mb-2"
                         style={{ letterSpacing: "0.08em" }}
                     >
                         Contact Us
@@ -44,7 +44,6 @@ export default function ContactSection() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     viewport={{ once: true }}
                     className="ornate-frame relative"
-                    style={{ padding: "2rem 1.5rem" }}
                 >
                     <div className="corner-tl" />
                     <div className="corner-tr" />

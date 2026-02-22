@@ -25,9 +25,11 @@ const config: Config = {
             },
             fontFamily: {
                 logo: ["var(--font-bilbo)", "cursive"],
-                heading: ["var(--font-bilbo)", "cursive"],
+                heading: ["var(--font-cinzel-deco)", "serif"],
                 script: ["var(--font-bilbo)", "cursive"],
-                body: ["var(--font-bilbo)", "cursive"],
+                body: ["var(--font-cormorant)", "serif"],
+                serif: ["var(--font-cormorant)", "serif"],
+                display: ["var(--font-imfell)", "serif"],
             },
             borderRadius: {
                 card: "6px",

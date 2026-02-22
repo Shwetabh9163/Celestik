@@ -9,7 +9,7 @@ export default function UnlockStory() {
     const router = useRouter();
 
     return (
-        <section className="px-4 py-8">
+        <section className="px-4 py-12 md:py-20">
             <div className="max-w-4xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -25,22 +25,22 @@ export default function UnlockStory() {
                     <div className="corner-br" />
 
                     {/* Heading */}
-                    <div className="text-center mb-6">
+                    <div className="text-center mb-6 px-2">
                         <h2
-                            className="font-heading uppercase text-gold text-2xl md:text-4xl mb-3"
+                            className="font-heading uppercase text-gold text-2xl md:text-3xl lg:text-4xl mb-3"
                             style={{ letterSpacing: "0.08em" }}
                         >
                             Unlock the Story in Your Palm
                         </h2>
                         {/* Decorative divider with stars */}
-                        <div className="flex items-center justify-center gap-3">
-                            <div className="h-px w-16 bg-gold/30" />
-                            <span className="text-gold/50 text-xs">✦</span>
-                            <p className="font-body text-gold-muted text-xs uppercase" style={{ letterSpacing: "0.08em" }}>
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3">
+                            <div className="hidden md:block h-px w-16 bg-gold/30" />
+                            <p className="font-body text-gold-muted text-[10px] md:text-xs uppercase" style={{ letterSpacing: "0.08em" }}>
+                                <span className="md:hidden text-gold/50 mr-2">✦</span>
                                 Not magic. Just stardust and algorithms.
+                                <span className="md:hidden text-gold/50 ml-2">✦</span>
                             </p>
-                            <span className="text-gold/50 text-xs">✦</span>
-                            <div className="h-px w-16 bg-gold/30" />
+                            <div className="hidden md:block h-px w-16 bg-gold/30" />
                         </div>
                     </div>
 

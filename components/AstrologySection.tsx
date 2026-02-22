@@ -8,7 +8,7 @@ export default function AstrologySection() {
     const [joined, setJoined] = useState(false);
 
     return (
-        <section className="pt-[120px] pb-16 px-4">
+        <section className="pt-20 md:pt-32 pb-16 px-4">
             <div className="max-w-3xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.97 }}
@@ -38,7 +38,7 @@ export default function AstrologySection() {
                     </motion.div>
 
                     <h2
-                        className="font-heading uppercase text-gold text-2xl md:text-3xl mb-3"
+                        className="font-heading uppercase text-gold text-xl md:text-3xl mb-3"
                         style={{ letterSpacing: "0.08em" }}
                     >
                         Astrology Coming Soon

@@ -11,8 +11,15 @@ body {
   overflow-x: hidden;
   position: relative;
   font-weight: 400;
-  line-height: 1.75;
-  letter-spacing: 0.02em;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 768px) {
+  body {
+    line-height: 1.75;
+    letter-spacing: 0.02em;
+  }
 }
 
 /* Vignette */
@@ -88,7 +95,13 @@ body::after {
   position: relative;
   border: 1px solid rgba(230, 211, 163, 0.3);
   border-radius: 4px;
-  padding: 3rem 2rem;
+  padding: 1.5rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .ornate-frame {
+    padding: 3rem 2rem;
+  }
 }
 
 .ornate-frame::before,
@@ -246,7 +259,8 @@ body::after {
 /* ── DIVIDER ── */
 .gold-divider {
   height: 1px;
-  width: 60%;
+  width: 80%;
+  max-width: 600px;
   margin: 0 auto;
   background: rgba(230, 211, 163, 0.3);
 }
