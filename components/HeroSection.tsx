@@ -78,7 +78,7 @@ export default function HeroSection() {
           <span
             className="font-logo uppercase text-gold leading-none"
             style={{
-              fontSize: "clamp(2.5rem, 15vw, 10rem)",
+              fontSize: "clamp(2rem, 15vw, 10rem)",
               letterSpacing: "0.08em",
               textShadow: "0 0 6px rgba(230,211,163,0.2)",
             }}
@@ -90,10 +90,10 @@ export default function HeroSection() {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-            className="mx-1 md:mx-4 flex-shrink-0"
+            className="mx-0.5 md:mx-4 flex-shrink-0"
             style={{
-              width: "clamp(100px, 15vw + 40px, 200px)",
-              height: "clamp(100px, 15vw + 40px, 200px)",
+              width: "clamp(80px, 15vw + 30px, 200px)",
+              height: "clamp(80px, 15vw + 30px, 200px)",
             }}
           >
             <ZodiacMandala size={undefined as any} />
@@ -102,7 +102,7 @@ export default function HeroSection() {
           <span
             className="font-logo uppercase text-gold leading-none"
             style={{
-              fontSize: "clamp(2.5rem, 15vw, 10rem)",
+              fontSize: "clamp(2rem, 15vw, 10rem)",
               letterSpacing: "0.08em",
               textShadow: "0 0 6px rgba(230,211,163,0.2)",
             }}

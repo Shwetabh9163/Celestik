@@ -13,12 +13,12 @@ export default function Navbar() {
       className="fixed top-3 left-3 right-3 z-50 border border-gold-border rounded"
       style={{ background: "rgba(10,10,46,0.85)", backdropFilter: "blur(6px)" }}
     >
-      <div className="max-w-6xl mx-auto px-5 flex justify-between items-center h-14">
+      <div className="max-w-6xl mx-auto px-2 sm:px-5 flex justify-between items-center h-14">
         {/* Logo with zodiac mandala */}
-        <Link href="/" className="flex items-center gap-2">
-          <ZodiacMandala size={30} />
+        <Link href="/" className="flex items-center gap-1.5 sm:gap-2">
+          <ZodiacMandala size={28} />
           <span
-            className="font-logo text-lg uppercase text-gold"
+            className="font-logo text-lg uppercase text-gold hidden sm:block"
             style={{ letterSpacing: "0.14em", textShadow: "0 0 6px rgba(230,211,163,0.2)" }}
           >
             Celestik
@@ -26,14 +26,14 @@ export default function Navbar() {
         </Link>
 
         {/* Pill nav links */}
-        <div className="flex items-center gap-1.5 sm:gap-3">
-          <Link href="/upload" className="nav-pill">
+        <div className="flex items-center gap-1 sm:gap-3">
+          <Link href="/upload" className="nav-pill text-[11px] sm:text-xs px-2 sm:px-4">
             Palmistry
           </Link>
-          <Link href="/#astrology" className="nav-pill">
+          <Link href="/#astrology" className="nav-pill text-[11px] sm:text-xs px-2 sm:px-4">
             Astrology
           </Link>
-          <Link href="/#contact" className="nav-pill text-[10px] sm:text-xs">
+          <Link href="/#contact" className="nav-pill text-[11px] sm:text-xs px-2 sm:px-4">
             Contact Us
           </Link>
         </div>

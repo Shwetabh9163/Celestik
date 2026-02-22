@@ -7,6 +7,7 @@
  */
 export default function ZodiacMandala({ size = 220 }: { size?: number }) {
     const cx = 150, cy = 150;
+    const strokeScale = size < 50 ? 1.5 : 1; // Thicker lines for smaller scales
 
     /* Zodiac symbols positioned around the wheel */
     const zodiac = [
@@ -24,8 +25,8 @@ export default function ZodiacMandala({ size = 220 }: { size?: number }) {
             className="flex-shrink-0 will-change-transform"
         >
             {/* ── OUTER DOTTED RING ── */}
-            <circle cx={cx} cy={cy} r="145" stroke="#E6D3A3" strokeWidth="0.5" strokeDasharray="2 4" opacity="0.4" />
-            <circle cx={cx} cy={cy} r="140" stroke="#E6D3A3" strokeWidth="0.8" opacity="0.5" />
+            <circle cx={cx} cy={cy} r="145" stroke="#E6D3A3" strokeWidth={0.5 * strokeScale} strokeDasharray="2 4" opacity="0.4" />
+            <circle cx={cx} cy={cy} r="140" stroke="#E6D3A3" strokeWidth={0.8 * strokeScale} opacity="0.5" />
 
             {/* ── MOON PHASE DOTS (outer ring) ── */}
             {Array.from({ length: 24 }, (_, i) => {
