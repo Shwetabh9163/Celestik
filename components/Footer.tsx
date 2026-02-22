@@ -67,7 +67,12 @@ export default function Footer() {
                         {["Palmistry", "Astrology", "How It Works", "Contact Us"].map((item, i) => (
                             <Link
                                 key={i}
-                                href={item === "Palmistry" ? "/upload" : item === "Contact Us" ? "#contact" : "#"}
+                                href={
+                                    item === "Palmistry" ? "/upload" :
+                                        item === "Astrology" ? "#astrology" :
+                                            item === "How It Works" ? "#how-it-works" :
+                                                "#contact"
+                                }
                                 className="nav-pill text-center w-full md:w-auto"
                             >
                                 {item}

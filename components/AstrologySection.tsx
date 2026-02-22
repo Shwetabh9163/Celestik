@@ -8,7 +8,7 @@ export default function AstrologySection() {
     const [joined, setJoined] = useState(false);
 
     return (
-        <section className="pt-20 md:pt-32 pb-16 px-4">
+        <section id="astrology" className="pt-20 md:pt-32 pb-16 px-4">
             <div className="max-w-3xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.97 }}
