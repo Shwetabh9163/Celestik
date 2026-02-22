@@ -46,7 +46,10 @@ export default function RootLayout({
             lang="en"
             className={`${cormorant.variable} ${cinzelDeco.variable} ${imFell.variable} ${bilbo.variable}`}
         >
-            <body className="font-body antialiased">{children}</body>
+            <body className="font-body antialiased">
+                <div className="bg-fixed-layer" aria-hidden="true" />
+                {children}
+            </body>
         </html>
     );
 }

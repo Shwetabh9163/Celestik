@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 
 
@@ -74,20 +75,16 @@ export default function UnlockStory() {
                             className="flex justify-center"
                         >
                             <div className="relative w-full max-w-[280px]">
-                                <img
+                                <Image
                                     src="/images/palm_hand.jpg"
                                     alt="Vintage Palmistry Hand"
-                                    className="w-full h-auto rounded-sm"
+                                    width={280}
+                                    height={420}
+                                    className="rounded-sm object-contain"
                                     style={{
                                         opacity: 0.75,
                                         mixBlendMode: "screen",
                                         filter: "grayscale(100%) contrast(1.2)",
-                                    }}
-                                    onError={(e) => {
-                                        // Fallback: hide broken image
-                                        (e.target as HTMLImageElement).style.display = "none";
-                                        const next = (e.target as HTMLImageElement).nextElementSibling as HTMLElement;
-                                        if (next) next.style.display = "flex";
                                     }}
                                 />
                                 {/* Fallback SVG hand if image fails */}

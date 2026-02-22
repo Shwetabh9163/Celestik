@@ -21,11 +21,11 @@ function Orbs() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
       <motion.div animate={{ x: -m.x, y: -m.y }} transition={spring}
-        className="absolute top-[20%] left-[10%] w-64 h-64 rounded-full"
-        style={{ background: "radial-gradient(circle,rgba(230,211,163,.2) 0%,transparent 70%)", filter: "blur(60px)" }} />
+        className="absolute top-[20%] left-[10%] w-64 h-64 rounded-full will-change-transform"
+        style={{ background: "radial-gradient(circle,rgba(230,211,163,.2) 0%,transparent 70%)", filter: "blur(40px)" }} />
       <motion.div animate={{ x: m.x * 0.7, y: m.y * 0.7 }} transition={spring}
-        className="absolute top-[50%] right-[5%] w-72 h-72 rounded-full"
-        style={{ background: "radial-gradient(circle,rgba(180,160,120,.15) 0%,transparent 70%)", filter: "blur(70px)" }} />
+        className="absolute top-[50%] right-[5%] w-72 h-72 rounded-full will-change-transform"
+        style={{ background: "radial-gradient(circle,rgba(180,160,120,.15) 0%,transparent 70%)", filter: "blur(50px)" }} />
     </div>
   );
 }

@@ -21,7 +21,7 @@ export default function ZodiacMandala({ size = 220 }: { size?: number }) {
             viewBox="0 0 300 300"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="flex-shrink-0"
+            className="flex-shrink-0 will-change-transform"
         >
             {/* ── OUTER DOTTED RING ── */}
             <circle cx={cx} cy={cy} r="145" stroke="#E6D3A3" strokeWidth="0.5" strokeDasharray="2 4" opacity="0.4" />
