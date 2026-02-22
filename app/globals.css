@@ -1,0 +1,327 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── ULTRA-DARK OCCULT BACKGROUND ── */
+body {
+  background: linear-gradient(180deg, #0a0a2e 0%, #0d0d35 30%, #111140 60%, #0a0a2e 100%);
+  background-attachment: fixed;
+  color: #D8C79A;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+}
+
+/* Vignette */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 35%, rgba(5, 5, 20, 0.8) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Film grain */
+body::after {
+  content: "";
+  position: fixed;
+  inset: -100%;
+  width: 400%;
+  height: 400%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 9999;
+  animation: grain 0.5s steps(1) infinite;
+}
+
+@keyframes grain {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-5%, -10%);
+  }
+
+  20% {
+    transform: translate(-15%, 5%);
+  }
+
+  30% {
+    transform: translate(7%, -25%);
+  }
+
+  40% {
+    transform: translate(-5%, 25%);
+  }
+
+  50% {
+    transform: translate(-15%, 10%);
+  }
+
+  60% {
+    transform: translate(15%, 0%);
+  }
+
+  70% {
+    transform: translate(0%, 15%);
+  }
+
+  80% {
+    transform: translate(3%, 35%);
+  }
+
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+/* ── ORNATE BORDER FRAME ── */
+.ornate-frame {
+  position: relative;
+  border: 1px solid rgba(230, 211, 163, 0.3);
+  border-radius: 4px;
+  padding: 3rem 2rem;
+}
+
+.ornate-frame::before,
+.ornate-frame::after {
+  content: "✦";
+  position: absolute;
+  color: rgba(230, 211, 163, 0.5);
+  font-size: 10px;
+}
+
+.ornate-frame::before {
+  top: -5px;
+  left: -5px;
+}
+
+.ornate-frame::after {
+  bottom: -5px;
+  right: -5px;
+}
+
+/* Corner flourishes */
+.corner-tl,
+.corner-tr,
+.corner-bl,
+.corner-br {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-color: rgba(230, 211, 163, 0.45);
+  border-style: solid;
+}
+
+.corner-tl {
+  top: -1px;
+  left: -1px;
+  border-width: 2px 0 0 2px;
+  border-radius: 4px 0 0 0;
+}
+
+.corner-tr {
+  top: -1px;
+  right: -1px;
+  border-width: 2px 2px 0 0;
+  border-radius: 0 4px 0 0;
+}
+
+.corner-bl {
+  bottom: -1px;
+  left: -1px;
+  border-width: 0 0 2px 2px;
+  border-radius: 0 0 0 4px;
+}
+
+.corner-br {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 2px 2px 0;
+  border-radius: 0 0 4px 0;
+}
+
+/* ── STEP/CARD STYLE ── */
+.step-card {
+  border: 1px solid rgba(230, 211, 163, 0.25);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  background: rgba(10, 10, 40, 0.4);
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  border-color: rgba(230, 211, 163, 0.4);
+  background: rgba(10, 10, 40, 0.55);
+}
+
+/* ── NAV PILL ── */
+.nav-pill {
+  border: 1px solid rgba(230, 211, 163, 0.4);
+  border-radius: 4px;
+  padding: 0.35rem 1rem;
+  font-family: var(--font-bilbo), cursive;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #E6D3A3;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.nav-pill:hover {
+  background: rgba(230, 211, 163, 0.08);
+  border-color: rgba(230, 211, 163, 0.6);
+}
+
+/* ── FORM INPUTS ── */
+.form-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(10, 10, 40, 0.3);
+  border: 1px solid rgba(230, 211, 163, 0.25);
+  border-radius: 4px;
+  color: #E6D3A3;
+  font-family: var(--font-bilbo), cursive;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-input::placeholder {
+  color: rgba(230, 211, 163, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+}
+
+.form-input:focus {
+  border-color: rgba(230, 211, 163, 0.5);
+  box-shadow: 0 0 8px rgba(230, 211, 163, 0.05);
+}
+
+/* ── PRIMARY BUTTON ── */
+.btn-gold {
+  background: #E6D3A3;
+  color: #0a0a2e;
+  font-family: var(--font-bilbo), cursive;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: #F0E0B8;
+  transform: scale(1.02);
+}
+
+/* ── SECONDARY BUTTON ── */
+.btn-outline {
+  background: transparent;
+  color: #E6D3A3;
+  font-family: var(--font-bilbo), cursive;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 1px solid rgba(230, 211, 163, 0.4);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: #E6D3A3;
+  background: rgba(230, 211, 163, 0.06);
+}
+
+/* ── DIVIDER ── */
+.gold-divider {
+  height: 1px;
+  width: 60%;
+  margin: 0 auto;
+  background: rgba(230, 211, 163, 0.3);
+}
+
+/* ── SCROLL PROGRESS ── */
+.scroll-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #E6D3A3, transparent);
+  z-index: 9998;
+  transition: width 0.1s linear;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(230, 211, 163, 0.2);
+  border-radius: 2px;
+}
+
+select option {
+  background: #0a0a2e;
+  color: #E6D3A3;
+}
+
+/* ── FLOATING LABELS (for upload page) ── */
+.fl-group {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.fl-input {
+  width: 100%;
+  padding: 1.1rem 0 0.5rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(230, 211, 163, 0.15);
+  color: #E6D3A3;
+  font-family: var(--font-bilbo), cursive;
+  font-weight: 400;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.fl-input:focus {
+  border-bottom-color: #E6D3A3;
+}
+
+.fl-label {
+  position: absolute;
+  top: 0.9rem;
+  left: 0;
+  color: #CBB27C;
+  font-size: 0.85rem;
+  font-weight: 400;
+  pointer-events: none;
+  transition: all 0.3s;
+  font-family: var(--font-bilbo), cursive;
+}
+
+.fl-input:focus~.fl-label,
+.fl-input:not(:placeholder-shown)~.fl-label {
+  top: -0.1rem;
+  font-size: 0.65rem;
+  color: #E6D3A3;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
