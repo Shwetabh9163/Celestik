@@ -10,9 +10,10 @@ body {
   overflow-x: hidden;
   position: relative;
   font-weight: 400;
-  line-height: clamp(1.5, 1.2vw + 1rem, 1.75);
-  letter-spacing: clamp(0.01em, 0.05vw, 0.03em);
-  font-size: clamp(1rem, 0.2vw + 0.9rem, 1.125rem);
+  line-height: clamp(1.4, 1vw + 0.8rem, 1.6);
+  letter-spacing: clamp(0.01em, 0.03vw, 0.02em);
+  font-size: clamp(0.9rem, 0.5vw + 0.8rem, 1.1rem);
+  width: 100%;
 }
 
 /* Optimized Fixed Background Layer */
@@ -98,12 +99,14 @@ body::after {
   position: relative;
   border: 1px solid rgba(230, 211, 163, 0.2);
   border-radius: 4px;
-  padding: clamp(1.5rem, 5vw, 3.5rem);
+  padding: clamp(1.25rem, 6vw, 3.5rem);
   background: rgba(10, 10, 46, 0.4);
   backdrop-filter: blur(8px);
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+  width: calc(100% - 2rem);
+  /* Safety margin for mobile */
 }
 
 .max-w-occult {
@@ -188,9 +191,10 @@ body::after {
 .nav-pill {
   border: 1px solid rgba(230, 211, 163, 0.4);
   border-radius: 4px;
-  padding: 0.4rem 1.25rem;
+  padding: 0.5rem 1rem;
+  /* Slightly taller for tap */
   font-family: var(--font-imfell), serif;
-  font-size: 0.75rem;
+  font-size: clamp(0.65rem, 1vw + 0.4rem, 0.75rem);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: #E6D3A3;
@@ -199,6 +203,8 @@ body::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-height: 32px;
+  /* Touch safety */
 }
 
 .nav-pill:hover {

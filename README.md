@@ -27,13 +27,13 @@
 
 ## 🛠️ Tech Stack
 
-| Category | Technologies |
-|----------|-------------|
-| **Frontend** | Next.js 14, React 18, TypeScript |
-| **Styling** | Tailwind CSS, Framer Motion |
-| **Icons** | Lucide React |
-| **Fonts** | Google Fonts (Cinzel, Inter) |
-| **Deployment** | Vercel (recommended) |
+| Category       | Technologies                     |
+| -------------- | -------------------------------- |
+| **Frontend**   | Next.js 14, React 18, TypeScript |
+| **Styling**    | Tailwind CSS, Framer Motion      |
+| **Icons**      | Lucide React                     |
+| **Fonts**      | Google Fonts (Cinzel, Inter)     |
+| **Deployment** | Vercel (recommended)             |
 
 ## 📂 Project Structure
 
@@ -63,23 +63,27 @@ celestik/
 ## 🏃‍♂️ Quick Start
 
 ### Prerequisites
+
 - Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Shwetabh9163/Celestik.git
    cd celestik
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Run development server**
+
    ```bash
    npm run dev
    ```
@@ -91,12 +95,12 @@ celestik/
 
 ## 📜 Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint checks |
+| Command         | Description              |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start development server |
+| `npm run build` | Build for production     |
+| `npm run start` | Start production server  |
+| `npm run lint`  | Run ESLint checks        |
 
 ## 🌓 User Journey
 
@@ -116,6 +120,7 @@ celestik/
 ## 📱 Pages & Components
 
 ### Landing Page (/)
+
 - Hero section with cosmic branding
 - How It Works (3-step process)
 - Trust & Security section
@@ -123,24 +128,28 @@ celestik/
 - Responsive navigation
 
 ### Upload Form (/upload)
+
 - Personal details form (name, age, gender)
 - Drag & drop image upload
 - Form validation
 - Image preview functionality
 
 ### Payment Page (/payment)
+
 - Order summary with user details
 - ₹1 payment mockup
 - Secure payment messaging
 - Thumbnail palm image display
 
 ### Processing Page (/processing)
+
 - Animated step-by-step loading
 - Cosmic particle effects
 - Progress indicators
 - Auto-redirect to report
 
 ### Report Page (/report)
+
 - Personality insights
 - Emotional archetypes
 - Life path themes

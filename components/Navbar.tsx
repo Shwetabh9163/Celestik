@@ -26,7 +26,7 @@ export default function Navbar() {
         </Link>
 
         {/* Pill nav links */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-3">
           <Link href="/upload" className="nav-pill hidden md:block">
             Palmistry
           </Link>
@@ -36,7 +36,7 @@ export default function Navbar() {
           <Link href="/#how-it-works" className="nav-pill hidden md:block">
             How It Works
           </Link>
-          <Link href="/#contact" className="nav-pill">
+          <Link href="/#contact" className="nav-pill text-[10px] sm:text-xs">
             Contact Us
           </Link>
         </div>
