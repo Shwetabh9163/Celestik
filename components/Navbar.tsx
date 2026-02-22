@@ -30,13 +30,13 @@ export default function Navbar() {
           <Link href="/upload" className="nav-pill hidden md:block">
             Palmistry
           </Link>
-          <Link href="#astrology" className="nav-pill hidden md:block">
+          <Link href="/#astrology" className="nav-pill hidden md:block">
             Astrology
           </Link>
-          <Link href="#how-it-works" className="nav-pill hidden md:block">
+          <Link href="/#how-it-works" className="nav-pill hidden md:block">
             How It Works
           </Link>
-          <Link href="#contact" className="nav-pill">
+          <Link href="/#contact" className="nav-pill">
             Contact Us
           </Link>
         </div>

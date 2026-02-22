@@ -10,8 +10,8 @@ export default function UnlockStory() {
     const router = useRouter();
 
     return (
-        <section className="px-4 py-12 md:py-20">
-            <div className="max-w-4xl mx-auto">
+        <section className="py-16 md:py-24 px-4">
+            <div className="max-w-occult mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}

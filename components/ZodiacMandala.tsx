@@ -16,8 +16,8 @@ export default function ZodiacMandala({ size = 220 }: { size?: number }) {
 
     return (
         <svg
-            width={size}
-            height={size}
+            width={size || "100%"}
+            height={size || "100%"}
             viewBox="0 0 300 300"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

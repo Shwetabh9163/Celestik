@@ -10,8 +10,9 @@ body {
   overflow-x: hidden;
   position: relative;
   font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
+  line-height: clamp(1.5, 1.2vw + 1rem, 1.75);
+  letter-spacing: clamp(0.01em, 0.05vw, 0.03em);
+  font-size: clamp(1rem, 0.2vw + 0.9rem, 1.125rem);
 }
 
 /* Optimized Fixed Background Layer */
@@ -21,13 +22,6 @@ body {
   background: linear-gradient(180deg, #0a0a2e 0%, #0d0d35 30%, #111140 60%, #0a0a2e 100%);
   pointer-events: none;
   z-index: -1;
-}
-
-@media (min-width: 768px) {
-  body {
-    line-height: 1.75;
-    letter-spacing: 0.02em;
-  }
 }
 
 /* Vignette */
@@ -99,18 +93,23 @@ body::after {
   }
 }
 
-/* ── ORNATE BORDER FRAME ── */
+/* ── ORNATE FRAME & CONTAINERS ── */
 .ornate-frame {
   position: relative;
-  border: 1px solid rgba(230, 211, 163, 0.3);
+  border: 1px solid rgba(230, 211, 163, 0.2);
   border-radius: 4px;
-  padding: 1.5rem 1rem;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  background: rgba(10, 10, 46, 0.4);
+  backdrop-filter: blur(8px);
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (min-width: 768px) {
-  .ornate-frame {
-    padding: 3rem 2rem;
-  }
+.max-w-occult {
+  max-width: clamp(800px, 85vw, 1400px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ornate-frame::before,
@@ -189,19 +188,24 @@ body::after {
 .nav-pill {
   border: 1px solid rgba(230, 211, 163, 0.4);
   border-radius: 4px;
-  padding: 0.35rem 1rem;
-  font-family: var(--font-bilbo), cursive;
-  font-size: 0.85rem;
+  padding: 0.4rem 1.25rem;
+  font-family: var(--font-imfell), serif;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.12em;
   color: #E6D3A3;
-  transition: all 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-pill:hover {
-  background: rgba(230, 211, 163, 0.08);
-  border-color: rgba(230, 211, 163, 0.6);
+  background: rgba(230, 211, 163, 0.1);
+  border-color: rgba(230, 211, 163, 0.8);
+  box-shadow: 0 0 15px rgba(230, 211, 163, 0.1);
+  transform: translateY(-1px);
 }
 
 /* ── FORM INPUTS ── */
@@ -234,35 +238,39 @@ body::after {
 .btn-gold {
   background: #E6D3A3;
   color: #0a0a2e;
-  font-family: var(--font-bilbo), cursive;
-  font-weight: 400;
+  font-family: var(--font-imfell), serif;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   border-radius: 4px;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(230, 211, 163, 0.1);
 }
 
 .btn-gold:hover {
-  background: #F0E0B8;
-  transform: scale(1.02);
+  background: #F2E4C2;
+  transform: scale(1.02) translateY(-2px);
+  box-shadow: 0 0 25px rgba(230, 211, 163, 0.35);
 }
 
 /* ── SECONDARY BUTTON ── */
 .btn-outline {
   background: transparent;
   color: #E6D3A3;
-  font-family: var(--font-bilbo), cursive;
+  font-family: var(--font-imfell), serif;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   border: 1px solid rgba(230, 211, 163, 0.4);
   border-radius: 4px;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-outline:hover {
   border-color: #E6D3A3;
-  background: rgba(230, 211, 163, 0.06);
+  background: rgba(230, 211, 163, 0.08);
+  box-shadow: 0 0 20px rgba(230, 211, 163, 0.15);
+  transform: translateY(-2px);
 }
 
 /* ── DIVIDER ── */

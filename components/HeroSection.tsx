@@ -50,16 +50,6 @@ function ZodiacBg() {
 
 export default function HeroSection() {
   const router = useRouter();
-  const [mandalaSize, setMandalaSize] = useState(200);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setMandalaSize(window.innerWidth < 640 ? 140 : 200);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-28 pb-20">
@@ -83,7 +73,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 0.5 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-0 mb-8"
+          className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-0 mb-8 sm:mb-12"
         >
           <span
             className="font-logo uppercase text-gold leading-none"
@@ -101,8 +91,12 @@ export default function HeroSection() {
             animate={{ rotate: 360 }}
             transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
             className="mx-2 md:mx-4 flex-shrink-0"
+            style={{
+              width: "clamp(140px, 15vw + 50px, 200px)",
+              height: "clamp(140px, 15vw + 50px, 200px)",
+            }}
           >
-            <ZodiacMandala size={mandalaSize} />
+            <ZodiacMandala size={undefined as any} />
           </motion.div>
 
           <span

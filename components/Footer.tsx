@@ -69,9 +69,9 @@ export default function Footer() {
                                 key={i}
                                 href={
                                     item === "Palmistry" ? "/upload" :
-                                        item === "Astrology" ? "#astrology" :
-                                            item === "How It Works" ? "#how-it-works" :
-                                                "#contact"
+                                        item === "Astrology" ? "/#astrology" :
+                                            item === "How It Works" ? "/#how-it-works" :
+                                                "/#contact"
                                 }
                                 className="nav-pill text-center w-full md:w-auto"
                             >
