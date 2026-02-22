@@ -31,7 +31,7 @@ export default function ContactSection() {
                     >
                         Contact Us
                     </h2>
-                    <p className="font-body text-gold-muted text-xs uppercase" style={{ letterSpacing: "0.05em" }}>
+                    <p className="font-display text-gold-muted text-xs md:text-sm uppercase" style={{ letterSpacing: "0.05em" }}>
                         Got questions written in your stars? Let&apos;s talk.
                     </p>
                 </motion.div>
@@ -89,7 +89,7 @@ export default function ContactSection() {
                             <p className="font-heading uppercase text-gold text-lg mb-2" style={{ letterSpacing: "0.06em" }}>
                                 Message Received
                             </p>
-                            <p className="font-body text-gold-muted text-sm">
+                            <p className="font-display text-gold-muted text-sm">
                                 The stars have noted your question. We&apos;ll reach out soon.
                             </p>
                         </motion.div>

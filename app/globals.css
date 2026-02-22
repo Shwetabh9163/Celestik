@@ -212,7 +212,7 @@ body::after {
   border: 1px solid rgba(230, 211, 163, 0.25);
   border-radius: 4px;
   color: #E6D3A3;
-  font-family: var(--font-bilbo), cursive;
+  font-family: var(--font-imfell), serif;
   font-size: 0.9rem;
   outline: none;
   transition: border-color 0.3s;
@@ -317,7 +317,7 @@ select option {
   border: none;
   border-bottom: 1px solid rgba(230, 211, 163, 0.15);
   color: #E6D3A3;
-  font-family: var(--font-bilbo), cursive;
+  font-family: var(--font-imfell), serif;
   font-weight: 400;
   font-size: 1rem;
   outline: none;
@@ -337,7 +337,7 @@ select option {
   font-weight: 400;
   pointer-events: none;
   transition: all 0.3s;
-  font-family: var(--font-bilbo), cursive;
+  font-family: var(--font-imfell), serif;
 }
 
 .fl-input:focus~.fl-label,
